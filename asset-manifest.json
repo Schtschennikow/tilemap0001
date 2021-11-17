@@ -1,6 +1,6 @@
 {
   "files": {
-    "main.css": "/tilemap0001/static/css/main.be9c334e.chunk.css",
+    "main.css": "/tilemap0001/static/css/main.a4639d32.chunk.css",
     "main.js": "/tilemap0001/static/js/main.8cd74082.chunk.js",
     "main.js.map": "/tilemap0001/static/js/main.8cd74082.chunk.js.map",
     "runtime-main.js": "/tilemap0001/static/js/runtime-main.98cd6b15.js",
@@ -8,13 +8,14 @@
     "static/js/2.13c3efc4.chunk.js": "/tilemap0001/static/js/2.13c3efc4.chunk.js",
     "static/js/2.13c3efc4.chunk.js.map": "/tilemap0001/static/js/2.13c3efc4.chunk.js.map",
     "index.html": "/tilemap0001/index.html",
-    "static/css/main.be9c334e.chunk.css.map": "/tilemap0001/static/css/main.be9c334e.chunk.css.map",
-    "static/js/2.13c3efc4.chunk.js.LICENSE.txt": "/tilemap0001/static/js/2.13c3efc4.chunk.js.LICENSE.txt"
+    "static/css/main.a4639d32.chunk.css.map": "/tilemap0001/static/css/main.a4639d32.chunk.css.map",
+    "static/js/2.13c3efc4.chunk.js.LICENSE.txt": "/tilemap0001/static/js/2.13c3efc4.chunk.js.LICENSE.txt",
+    "static/media/index.css": "/tilemap0001/static/media/TTNorms-Regular.7281703a.ttf"
   },
   "entrypoints": [
     "static/js/runtime-main.98cd6b15.js",
     "static/js/2.13c3efc4.chunk.js",
-    "static/css/main.be9c334e.chunk.css",
+    "static/css/main.a4639d32.chunk.css",
     "static/js/main.8cd74082.chunk.js"
   ]
 }
