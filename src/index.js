@@ -202,6 +202,7 @@ class Chart extends React.Component {
             <h1>Валовой региональный продукт <br /> на душу населения</h1>
             <GetMap year={this.state.defyear} />
             {this.renderLegend(this.state.defyear)}
+            <div id='inputContainer'>
             <input
               id='input'
               type='range'
@@ -211,6 +212,7 @@ class Chart extends React.Component {
             step='1'/>
             <div className="sliderticks" id="sliderticks">
                 {this.renderTiks(this.state.years)}
+            </div>
             </div>
           </div>
       );

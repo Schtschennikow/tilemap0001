@@ -35,6 +35,12 @@ body {
   grid-template-rows: repeat(11, 1fr);
 }
 
+#inputContainer{
+  width: 90%;
+  margin-left: auto;
+  margin-right: auto;
+}
+
 #input {
   -webkit-appearance: none;
   -moz-appearance: none;
@@ -45,6 +51,7 @@ body {
   outline: none;
   opacity: 1;
   cursor: pointer;
+  margin: 0;
 }
 
 #input::-webkit-slider-thumb {
@@ -198,6 +205,12 @@ h1 {
 }
 
 @media (max-width: 560px) {
+  #inputContainer{
+    width: 90%;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
   .regAbbr {
     display: none;
   }
@@ -208,6 +221,12 @@ h1 {
 }
 
 @media (min-width: 730px) {
+  #inputContainer{
+    width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
   .legendTile {
     font-size: 10pt;
     transform: translate(0px,16px);
