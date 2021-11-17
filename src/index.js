@@ -74,8 +74,6 @@ class Tile extends React.Component {
   let bin = "b"+this.props.value.bins,
       regnum = numberWithCommas(this.props.value.value);
 
-  
-
   return (
     <div
         style={{
@@ -96,12 +94,12 @@ class Tile extends React.Component {
         <div className='tile'>
           <div 
             className='regAbbr' 
-            style={{color: bin == "b6" | bin == "b5" ? "#E2E2E6" : "#3E3E59"}}
+            style={{color: bin === "b6" | bin === "b5" ? "#E2E2E6" : "#3E3E59"}}
           >
             {this.props.value.reg_abbr}
           </div>
         </div>
-        
+
       </Tooltip>
     </div>
     );
@@ -132,6 +130,7 @@ class Chart extends React.Component {
       this.state = {
         defyear: startYear,
         data: data.data,
+        years: Array.from({ length: 2019 - startYear + 1 }, (_, i) => i+startYear)
       };
   }
 
@@ -151,6 +150,9 @@ class Chart extends React.Component {
               this.renderTile(d)
           )
         })}
+        <div id='bigNumber'>
+          <h1>{year}</h1>
+        </div>
       </div>
   )}
 
@@ -160,16 +162,30 @@ class Chart extends React.Component {
 
   render() {
       return (
-          <div id="container"> 
+          <div id="mainContainer">
             <h1>Валовой региональный продукт <br /> на душу населения</h1>
-            {this.renderTiles(this.state.defyear)}
+            <div id="container"> 
+              {this.renderTiles(this.state.defyear)}
+            </div>
             {this.renderLegend(this.state.defyear)}
             <input
               id='input'
               type='range'
               min={startYear} max='2019'
+              list="steplist"
               onChange={(event) => this.handleChange(event)}
             step='1'/>
+            <div className="sliderticks" id="sliderticks">
+                {
+                  this.state.years.map((d, i) => {
+                    if (i===0 | i===this.state.years.length-1) {
+                      return ( <p>{d}</p> )
+                    } else {
+                      return ( <p>'</p> )
+                    }
+                  })
+                }
+            </div>
           </div>
       );
 }}

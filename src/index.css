@@ -7,17 +7,22 @@ body {
   user-select: none;
   margin: 1%;
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue', 'TT Norms',
+    'Grandis'
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   color: #263238;
 }
 
-#container {
-  width: 98%;
-  height: 57.89vw;
+#mainContainer{
+  /* width: 100%; */
   max-width: 760px;
+}
+
+#container {
+  width: 100%;
+  height: 57.89vw;
   max-height: 440px;
 }
 
@@ -61,6 +66,23 @@ body {
   background: #0CC2B5;
 }
 
+.sliderticks {
+  display: flex;
+  justify-content: space-between;
+  padding: 10px 10px;
+}
+
+.sliderticks p {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  text-align: center;
+  width: 0;
+  font-size: 10pt;
+  font-family: 'TT Norms';
+  margin: 0 0 0 0;
+}
+
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
@@ -76,6 +98,18 @@ code {
   grid-template-rows: repeat(11, 1fr);
 }
 
+#bigNumber {
+  grid-column-start: 12;
+  grid-column-end: 16;
+  grid-row-start: 9;
+  grid-row-end: 11;
+  justify-content: center;
+  text-align: center;
+  margin: 0;
+  padding: 0;
+  /* color: #0CC2B5; */
+}
+
 #legend {
   position: relative;
   width: 100%;
@@ -88,9 +122,10 @@ code {
 
 .legendTile {
   font-size: 8pt;
+  font-family: 'TT Norms';
   position: relative;
   top: 12;
-  transform: translate(0px,12px);
+  transform: translate(0px,14px);
 }
 
 .regAbbr {
@@ -101,10 +136,10 @@ code {
   left: 0;
   padding: 0;
   margin: 0;
+  font-family: 'TT Norms';
 }
 
 .tile{
-  /* position: absolute; */
   width: 100%;
   height: 100%;
   margin: 0;
@@ -122,6 +157,7 @@ code {
 
 h1 {
   font-size: 24pt;
+  font-family: 'Grandis';
 }
 
 .tileCont {
@@ -143,12 +179,14 @@ h1 {
   top: 100%;
   right: 100%;
   transform: translate(-4px,36px);
+  font-family: 'TT Norms';
 }
 
 .tooltip-right {
   top: 100%;
   left: 100%;
   transform: translate(36px,36px);
+  font-family: 'TT Norms';
 }
 
 .tooltip-message {
