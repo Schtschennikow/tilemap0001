@@ -86,19 +86,22 @@ class Tile extends React.Component {
             backgroundColor: colors[bin]
         }}
     >
-      {/* <div className='tile'></div> */}
+      
       <Tooltip 
         message={this.props.value.region} 
         position={ this.props.value.column > 10 ? "left" : "right" } 
         regnum={regnum}
         currency={this.props.value.currency}>
 
-        <div 
-          className='regAbbr' 
-          style={{color: bin == "b6" | bin == "b5" ? "#E2E2E6" : "#3E3E59"}}
-        >
-          {this.props.value.reg_abbr}
+        <div className='tile'>
+          <div 
+            className='regAbbr' 
+            style={{color: bin == "b6" | bin == "b5" ? "#E2E2E6" : "#3E3E59"}}
+          >
+            {this.props.value.reg_abbr}
+          </div>
         </div>
+        
       </Tooltip>
     </div>
     );
