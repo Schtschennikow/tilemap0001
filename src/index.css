@@ -15,7 +15,7 @@ body {
 }
 
 #mainContainer{
-  /* width: 100%; */
+  width: 100%;
   max-width: 760px;
 }
 
@@ -23,6 +23,16 @@ body {
   width: 100%;
   height: 57.89vw;
   max-height: 440px;
+}
+
+#maprf {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  
+  display: grid;
+  grid-template-columns: repeat(19, 1fr);
+  grid-template-rows: repeat(11, 1fr);
 }
 
 #input {
@@ -85,16 +95,6 @@ body {
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
-}
-
-#maprf {
-  position: relative;
-  width: 100%;
-  height: 100%;
-
-  display: grid;
-  grid-template-columns: repeat(19, 1fr);
-  grid-template-rows: repeat(11, 1fr);
 }
 
 #bigNumber {
@@ -170,6 +170,7 @@ h1 {
 .tooltip-bubble {
   width: max-content;
   height: max-content;
+  max-width: 40vw;
   position: absolute;
   z-index: 10;
 }

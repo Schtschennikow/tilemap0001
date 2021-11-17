@@ -124,22 +124,16 @@ class Legend extends React.Component {
     );
 }}
 
-class Chart extends React.Component {
+class Map extends React.Component {
   constructor(props) {
       super(props);
       this.state = {
-        defyear: startYear,
-        data: data.data,
-        years: Array.from({ length: 2019 - startYear + 1 }, (_, i) => i+startYear)
+        data: data.data
       };
   }
 
-  renderLegend(year) {
-      return <Legend value={year} />
-  }
-
   renderTile(d) {
-      return <Tile value={d} />;
+    return <Tile value={d} />;
   }
 
   renderTiles(year) {
@@ -156,6 +150,48 @@ class Chart extends React.Component {
       </div>
   )}
 
+  render() {
+    return(
+      this.renderTiles(this.props.year)
+    )
+  }
+
+}
+
+function GetMap(props) {
+  return (
+    <div id="container">
+      <Map year={props.year} />
+    </div>
+  )
+}
+
+class Chart extends React.Component {
+  constructor(props) {
+      super(props);
+      this.state = {
+        defyear: startYear,
+        data: data.data,
+        years: Array.from({ length: 2019 - startYear + 1 }, (_, i) => i+startYear)
+      };
+  }
+
+  renderLegend(year) {
+      return <Legend value={year} />
+  }
+
+  renderTiks(years) {
+    return (
+      years.map((d, i) => {
+        if (i===0 | i===years.length-1) {
+          return ( <p>{d}</p> )
+        } else {
+          return ( <p>'</p> )
+        }
+      })
+    )
+  }
+
   handleChange(event) {
     this.setState({defyear: event.target.value});
   }
@@ -164,9 +200,7 @@ class Chart extends React.Component {
       return (
           <div id="mainContainer">
             <h1>Валовой региональный продукт <br /> на душу населения</h1>
-            <div id="container"> 
-              {this.renderTiles(this.state.defyear)}
-            </div>
+            <GetMap year={this.state.defyear} />
             {this.renderLegend(this.state.defyear)}
             <input
               id='input'
@@ -176,15 +210,7 @@ class Chart extends React.Component {
               onChange={(event) => this.handleChange(event)}
             step='1'/>
             <div className="sliderticks" id="sliderticks">
-                {
-                  this.state.years.map((d, i) => {
-                    if (i===0 | i===this.state.years.length-1) {
-                      return ( <p>{d}</p> )
-                    } else {
-                      return ( <p>'</p> )
-                    }
-                  })
-                }
+                {this.renderTiks(this.state.years)}
             </div>
           </div>
       );
