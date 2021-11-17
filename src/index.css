@@ -78,6 +78,7 @@ body {
   text-align: center;
   width: 0;
   font-size: 10pt;
+  font-family: 'TT';
   margin: 0 0 0 0;
 }
 
@@ -112,6 +113,7 @@ code {
   position: relative;
   width: 100%;
   height: 8pt;
+  font-family: 'TT';
   display: grid;
   grid-template-columns: repeat(6, 1fr);
   margin-top: 21pt;
@@ -129,6 +131,7 @@ code {
   position: absolute;
   width: max-content;
   font-size: 8pt;
+  font-family: 'TT';
   top: 0;
   left: 0;
   padding: 0;
@@ -153,6 +156,7 @@ code {
 
 h1 {
   font-size: 24pt;
+  font-family: 'Grandis';
 }
 
 .tileCont {
@@ -187,6 +191,7 @@ h1 {
   border-radius: 3px;
   color: #263238;
   font-size: 10pt;
+  font-family: 'TT';
   padding: .75em;
   text-align: left;
 }
@@ -209,4 +214,16 @@ h1 {
   .regAbbr {
     font-size: 10pt;
   }
+}
+
+@font-face {
+  font-family: "TT";
+  src: local("TT"),
+   url("./TTNorms-Regular.ttf") format("truetype");
+}
+
+@font-face {
+  font-family: "Grandis";
+  src: local("Grandis"),
+   url("./Grandis-Bold.ttf") format("truetype");
 }
