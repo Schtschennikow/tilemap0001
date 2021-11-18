@@ -135,7 +135,6 @@ code {
 }
 
 .regAbbr {
-  position: absolute;
   width: max-content;
   font-size: 8pt;
   font-family: 'TT';
@@ -146,6 +145,7 @@ code {
 }
 
 .tile{
+  /* position: absolute; */
   width: 100%;
   height: 100%;
   margin: 0;

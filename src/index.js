@@ -207,6 +207,7 @@ class Chart extends React.Component {
               id='input'
               type='range'
               min={startYear} max='2019'
+              value={this.state.defyear}
               list="steplist"
               onChange={(event) => this.handleChange(event)}
             step='1'/>
