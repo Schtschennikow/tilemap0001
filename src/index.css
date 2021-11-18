@@ -17,6 +17,8 @@ body {
 #mainContainer{
   width: 100%;
   max-width: 760px;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 #container {
@@ -191,7 +193,7 @@ h1 {
 .tooltip-right {
   top: 100%;
   left: 100%;
-  transform: translate(36px,36px);
+  transform: translate(42px,36px);
 }
 
 .tooltip-message {
